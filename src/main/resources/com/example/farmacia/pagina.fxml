@@ -9,38 +9,38 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.farmacia.Controller.PedidoController">
-   <children>
-      <Button fx:id="btnHacerPedido" layoutX="235.0" layoutY="206.0" mnemonicParsing="false" onAction="#onHacerPedidoClick" prefHeight="25.0" prefWidth="130.0" text="Hacer pedido" />
-      <Label layoutX="173.0" layoutY="48.0" text="ELIGE TU PRODUCTO">
-         <font>
-            <Font size="27.0" />
-         </font>
-      </Label>
-      <RadioButton fx:id="tgIbuprofeno" layoutX="20.0" layoutY="116.0" mnemonicParsing="false" text="Ibuprofeno - 5.50€" toggleGroup="$conjunto" />
-      <RadioButton fx:id="tgParacetamol" layoutX="460.0" layoutY="256.0" mnemonicParsing="false" text="Paracetamol - 7.50€" toggleGroup="$conjunto" />
-      <RadioButton fx:id="tgAmoxicilina" layoutX="460.0" layoutY="116.0" mnemonicParsing="false" text="Amoxicilina - 4.50€" toggleGroup="$conjunto" />
-      <RadioButton fx:id="tgSupositorios" layoutX="19.0" layoutY="259.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="183.0" text="Supositorios - 10.50€" toggleGroup="$conjunto" />
-      <ImageView fitHeight="94.0" fitWidth="147.0" layoutX="10.0" layoutY="145.0">
-         <image>
-            <Image url="@../../../imagenes/ibuprofeno.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="106.0" fitWidth="147.0" layoutX="448.0" layoutY="139.0">
-         <image>
-            <Image url="@../../../imagenes/amoxicilina.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="94.0" fitWidth="112.0" layoutX="28.0" layoutY="293.0">
-         <image>
-            <Image url="@../../../imagenes/supositorio.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="86.0" fitWidth="127.0" layoutX="460.0" layoutY="297.0">
-         <image>
-            <Image url="@../../../imagenes/paracetamol.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="btnVolver" layoutX="235.0" layoutY="328.0" mnemonicParsing="false" onAction="#onHacerClickVolver" prefHeight="25.0" prefWidth="130.0" text="Volver" />
-   </children>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.farmacia.Controller.PedidoController">
+   <Button fx:id="btnHacerPedido" layoutX="235.0" layoutY="206.0" mnemonicParsing="false" onAction="#onHacerPedidoClick"
+           prefHeight="25.0" prefWidth="130.0" text="Hacer pedido"/>
+   <Label layoutX="173.0" layoutY="48.0" text="ELIGE TU PRODUCTO">
+      <font>
+         <Font size="27.0"/>
+      </font>
+   </Label>
+   <RadioButton fx:id="tgIbuprofeno" layoutX="20.0" layoutY="116.0" mnemonicParsing="false" text="Ibuprofeno - 5.50€">
+      <toggleGroup>
+         <ToggleGroup fx:id="conjunto"/>
+      </toggleGroup>
+   </RadioButton>
+   <RadioButton fx:id="tgParacetamol" layoutX="460.0" layoutY="262.0" mnemonicParsing="false" text="Paracetamol - 7.50€"
+                toggleGroup="$conjunto"/>
+   <RadioButton fx:id="tgAmoxicilina" layoutX="460.0" layoutY="116.0" mnemonicParsing="false" text="Amoxicilina - 4.50€"
+                toggleGroup="$conjunto"/>
+   <RadioButton fx:id="tgSupositorios" layoutX="19.0" layoutY="259.0" mnemonicParsing="false" prefHeight="17.0"
+                prefWidth="183.0" text="Supositorios - 10.50€" toggleGroup="$conjunto"/>
+   <ImageView fitHeight="94.0" fitWidth="147.0" layoutX="10.0" layoutY="145.0">
+      <Image url="@../../../imagenes/ibuprofeno.png"/>
+   </ImageView>
+   <ImageView fitHeight="106.0" fitWidth="147.0" layoutX="448.0" layoutY="139.0">
+      <Image url="@../../../imagenes/amoxicilina.png"/>
+   </ImageView>
+   <ImageView fitHeight="94.0" fitWidth="112.0" layoutX="28.0" layoutY="293.0">
+      <Image url="@../../../imagenes/supositorio.png"/>
+   </ImageView>
+   <ImageView fitHeight="86.0" fitWidth="127.0" layoutX="460.0" layoutY="297.0">
+      <Image url="@../../../imagenes/paracetamol.png"/>
+   </ImageView>
+   <Button fx:id="btnVolver" layoutX="235.0" layoutY="328.0" mnemonicParsing="false" onAction="#onHacerClickVolver"
+           prefHeight="25.0" prefWidth="130.0" text="Volver"/>
 </AnchorPane>

@@ -67,24 +67,22 @@ public class PedidoController {
             String paracetamol = "paracetamol";
             String supositorios = "supositorios";
 
-            String nombreProducto="";
+            String nombreProducto;
             double precioProducto;
             Producto producto;
 
             try{
                 if (tgIbuprofeno.isSelected()){
                     nombreProducto = ibuprofeno;
-                    precioProducto = ProductosDAO.buscarPrecio(nombreProducto);
                 } else if (tgAmoxicilina.isSelected()) {
                     nombreProducto = amoxicilina;
-                    precioProducto = ProductosDAO.buscarPrecio(nombreProducto);
                 } else if (tgParacetamol.isSelected()){
                     nombreProducto = paracetamol;
-                    precioProducto = ProductosDAO.buscarPrecio(nombreProducto);
                 } else {
                     nombreProducto = supositorios;
-                    precioProducto = ProductosDAO.buscarPrecio(nombreProducto);
                 }
+
+                precioProducto = ProductosDAO.buscarPrecio(nombreProducto);
 
                 producto = new Producto(nombreProducto, precioProducto);
                 lista.add(producto);
@@ -95,6 +93,7 @@ public class PedidoController {
                 TicketController ticketController = fxmlLoader.getController();
                 ticketController.metod(lista);
 
+                // Mostramos ventana nueva
                 Scene scene = new Scene(root);
                 Stage stage = new Stage();
                 stage.initModality(Modality.APPLICATION_MODAL);

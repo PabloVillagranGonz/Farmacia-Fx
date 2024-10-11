@@ -20,9 +20,8 @@ public class ProductosDAO {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 String nombreProducto2 = rs.getString("nombreProducto");
-                if (nombreProducto.equals(nombreProducto2)) {
+                if (nombreProducto.equalsIgnoreCase(nombreProducto2)) {
                     precioProducto = rs.getDouble("precioProducto");
-
                 }
             }
         }catch (Exception e){

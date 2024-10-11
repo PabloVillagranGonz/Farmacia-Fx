@@ -49,7 +49,7 @@ public class LoginController {
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("pagina.fxml"));
                     Parent root = fxmlLoader.load();
-                    //PedidoController controller = fxmlLoader.getController();
+                    PedidoController controller = fxmlLoader.getController();
 
                     Scene scene = new Scene(root);
                     Stage stage = (Stage) btnLogin.getScene().getWindow();
@@ -61,7 +61,7 @@ public class LoginController {
                 Alerta.alertaError("Contraseña incorrecta");
             }
         } else {
-                System.out.println("No existe el cliente. REGISTRATE");
+                Alerta.alertaError("No existe el cliente. REGISTRATE");
             }
         }
     }
